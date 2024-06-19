@@ -9,15 +9,15 @@ import Articles from "./components/allArticles/articles";
 function App() {
   return (
     <>
-      {/*  */}
+      {/* routes */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books />} />
           <Route path="/article" element={<Article />} />
           <Route path="/articles" element={<Articles />} />
-          <Route path="/add-article" element={<AddArticle />} />{" "}
-          {/* New route for adding an article */}
+          <Route path="/add-article" element={<AddArticle />} />
+
           <Route path="/article/:articleId" element={<Article />} />
           <Route path="/edit-article/:articleId" element={<EditArticle />} />
           <Route path="/books" element={<Books />} />
