@@ -49,8 +49,8 @@ export default function HeroSection() {
             <img
               data-aos="fade-right"
               src={Image}
-              alt="Hero Image"
               className="heroImg w-full h-auto shadow-lg"
+              alt="image"
             />
           </div>
         </div>

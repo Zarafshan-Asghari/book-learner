@@ -16,7 +16,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 // Import required modules
-import { FreeMode, Pagination, Autoplay } from "swiper/modules";
+import { FreeMode, Autoplay } from "swiper/modules";
 
 function Home() {
   const [articles, setArticle] = useState([]);

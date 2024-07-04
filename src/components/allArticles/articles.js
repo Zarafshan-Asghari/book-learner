@@ -169,7 +169,7 @@ export default function Articles() {
             ))}
           </div>
           {/* alert when searching was not found */}
-          {articles.length == 0 && (
+          {articles.length === 0 && (
             <div className="flex items-center justify-center">
               {" "}
               <p className="capitalize text-xl text-[#e63946] text-center border border-[#e63946]  p-2 rounded-lg max-w-sm">
