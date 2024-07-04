@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/book-learner/static/css/main.853a07c5.css",
+    "main.js": "/book-learner/static/js/main.bebbfcdc.js",
+    "static/media/hero.jpg": "/book-learner/static/media/hero.b89088bdb2364336d682.jpg",
+    "static/media/booklearner-high-resolution-logo-transparent.png": "/book-learner/static/media/booklearner-high-resolution-logo-transparent.b820849fe22433079fc7.png",
+    "index.html": "/book-learner/index.html",
+    "main.853a07c5.css.map": "/book-learner/static/css/main.853a07c5.css.map",
+    "main.bebbfcdc.js.map": "/book-learner/static/js/main.bebbfcdc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.853a07c5.css",
+    "static/js/main.bebbfcdc.js"
+  ]
+}

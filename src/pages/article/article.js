@@ -30,7 +30,7 @@ function Article() {
           showConfirmButton: false,
         });
         // requst to delete
-        axios.delete(`http://localhost/react/api/articles/?id=${articleId}`);
+        axios.delete(`http://localhost:3000/books/?id=${articleId}`);
         navigate("/");
       }
     });
@@ -38,7 +38,7 @@ function Article() {
   // TODO
   useEffect(() => {
     axios
-      .get(`http://localhost/react/api/articles/?id=${articleId}`)
+      .get(`hhttp://localhost:3000/books/?id=${articleId}`)
       .then((resp) => {
         setArticleData(resp.data.data[0]);
       })

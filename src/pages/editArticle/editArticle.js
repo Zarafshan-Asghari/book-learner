@@ -11,7 +11,7 @@ function EditArticle() {
   // Fetching article data
   useEffect(() => {
     axios
-      .get(`http://localhost/react/api/articles/?id=${articleId}`)
+      .get(`http://localhost:3000/books/?id=${articleId}`)
       .then((response) => setArticleData(response.data.data[0]));
   }, [articleId]);
 
@@ -19,7 +19,7 @@ function EditArticle() {
   const editArticleFun = (e) => {
     e.preventDefault(); // Prevent form from reloading the page
     axios
-      .put(`http://localhost/react/api/articles/?id=${articleId}`, articleData)
+      .put(`http://localhost:3000/books/?id=${articleId}`, articleData)
       .then((response) => {
         // Handle successful update.
         Swal.fire({

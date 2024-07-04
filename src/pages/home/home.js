@@ -23,9 +23,10 @@ function Home() {
   const [books, setBooks] = useState([]);
 
   // Request for articles
+  // http://localhost/react/api/articles/?order=desc&column=id
   useEffect(() => {
     axios
-      .get(`http://localhost/react/api/articles/?order=desc&column=id`)
+      .get(`http://localhost:3000/books`)
       .then((response) => setArticle(response.data.data));
   }, []);
 
