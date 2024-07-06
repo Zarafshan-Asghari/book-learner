@@ -3,7 +3,7 @@ import { BiTimeFive } from "react-icons/bi";
 import { IoArrowForward } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-function ArticleItem(props) {
+function BookitemLocal(props) {
   return (
     <div className="flex flex-col w-full rounded-md shadow-md hover:border border-[#fffad6] transition hover:scale-105 duration-200">
       {/* Image container */}
@@ -28,7 +28,7 @@ function ArticleItem(props) {
           </h4>
           <p className="text-sm font-thin text-pretty">{props.description}</p>
         </div>
-        <Link to={`article/${props.id}`}>
+        <Link to={`book/${props.id}`}>
           <div className="text-[#1d3557] hover:text-[#e63946] mt-2">
             <span>Read more</span>
             <IoArrowForward className="cursor-pointer inline ml-1" />
@@ -38,13 +38,13 @@ function ArticleItem(props) {
       {/* Footer */}
       <div className="flex items-center justify-between p-4 bg-[#f1faee] border-t border-[#f1faee] text-xs capitalize">
         <span>Writer: {props.writer}</span>
-        <span>
+        {/* <span>
           <BiTimeFive className="inline mr-1" title="time" />
           {props.readingTime} minutes
-        </span>
+        </span> */}
       </div>
     </div>
   );
 }
 
-export default ArticleItem;
+export default BookitemLocal;

@@ -37,7 +37,6 @@
         "image": "https://images.unsplash.com/photo-1541511182319-cc040c3680bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8S2lsbCUyMGElMjBNb2NraW5nYmlyZHxlbnwwfHwwfHx8MA%3D%3D",
         "author": "Harper Lee"
       },
-
       {
         "id": 7,
         "title": "The Catcher in the Rye",
@@ -91,6 +90,14 @@
         "image": "https://images.unsplash.com/photo-1629626752470-a5fbbcfdc45a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fGFmZ2hhbmlzdGFufGVufDB8fDB8fHww",
         "author": "Fawzia Koofi"
       }
-    ]
+    ],
+    {
+      "id": "146c",
+      "title": "ssss",
+      "text": "ssssssssss",
+      "writter": "dllll",
+      "catagory": "sport",
+      "image": "https://plus.unsplash.com/premium_vector-1702654018171-aebf779052ed?bg=FFFFFF&q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
   ]
 }

@@ -40,7 +40,7 @@ export default function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/books"
+              to="/search-books"
               className="text-[#e63946] border-[#f1faee] hover:border-[#e63946] rounded-lg font-semibold py-2 px-4 border-2 border-transparent transition-colors duration-300"
             >
               books
@@ -48,18 +48,18 @@ export default function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/add-article"
+              to="/add-book"
               className="text-[#e63946] border-[#f1faee] hover:border-[#e63946] rounded-lg font-semibold py-2 px-4 border-2 border-transparent transition-colors duration-300"
             >
-              add article
+              add book
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/articles"
+              to="/local-book-search"
               className="text-[#e63946] border-[#f1faee] hover:border-[#e63946] rounded-lg font-semibold py-2 px-4 border-2 border-transparent transition-colors duration-300"
             >
-              Articles
+              local search
             </NavLink>
           </li>
         </ul>
@@ -88,20 +88,20 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/add-article"
+                to="/add-book"
                 className="text-[#e63946] border-[#f1faee] hover:border-[#e63946] rounded-lg font-semibold py-2 px-4 border-2 border-transparent transition-colors duration-300"
                 onClick={toggleMenuAndNav}
               >
-                Add Article
+                Add book
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/articles"
+                to="/local-book-search"
                 className="text-[#e63946] border-[#f1faee] hover:border-[#e63946] rounded-lg font-semibold py-2 px-4 border-2 border-transparent transition-colors duration-300"
                 onClick={toggleMenuAndNav}
               >
-                Articles
+                books(local)
               </NavLink>
             </li>
             <li></li>

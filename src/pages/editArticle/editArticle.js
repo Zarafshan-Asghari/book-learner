@@ -5,25 +5,25 @@ import Navbar from "../../components/navbar/navbar";
 import Swal from "sweetalert2";
 
 function EditArticle() {
-  const { articleId } = useParams();
+  const { bookId } = useParams();
   const [articleData, setArticleData] = useState({});
 
   // Fetching article data
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/books/?id=${articleId}`)
-      .then((response) => setArticleData(response.data.data[0]));
-  }, [articleId]);
+      .get(`http://localhost:3000/books/?id=${bookId}`)
+      .then((response) => setArticleData(response.data[0]));
+  }, [bookId]);
 
   // Handle form submission
   const editArticleFun = (e) => {
     e.preventDefault(); // Prevent form from reloading the page
     axios
-      .put(`http://localhost:3000/books/?id=${articleId}`, articleData)
+      .put(`http://localhost:3000/books/?id=${bookId}`, articleData)
       .then((response) => {
         // Handle successful update.
         Swal.fire({
-          title: "Article updated successfully",
+          title: " updated successfully",
           timer: 2000,
           timerProgressBar: true,
           showConfirmButton: false,

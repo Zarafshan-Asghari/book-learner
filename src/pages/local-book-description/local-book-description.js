@@ -4,14 +4,14 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import Navbar from "../../components/navbar/navbar";
 import Swal from "sweetalert2";
 
-function Article() {
-  const { articleId } = useParams(); // Destructure articleId from useParams
-  const [articleData, setArticleData] = useState([]);
+function LocalBookDescription() {
+  const { bookId } = useParams(); // Destructure bookId from useParams
+  const [bookData, setbookData] = useState([]);
 
   const navigate = useNavigate();
 
-  // delete article function
-  const deletArticle = (id) => {
+  // delete Book function
+  const deletBook = (id) => {
     // alert befor deleting
     Swal.fire({
       title: "Are you sure?",
@@ -30,7 +30,7 @@ function Article() {
           showConfirmButton: false,
         });
         // requst to delete
-        axios.delete(`http://localhost:3000/books/?id=${articleId}`);
+        axios.delete(`http://localhost:3000/books/?id=${bookId}`);
         navigate("/");
       }
     });
@@ -38,14 +38,14 @@ function Article() {
   // TODO
   useEffect(() => {
     axios
-      .get(`hhttp://localhost:3000/books/?id=${articleId}`)
+      .get(`http://localhost:3000/books/id=${bookId}`)
       .then((resp) => {
-        setArticleData(resp.data.data[0]);
+        console.log(resp.data[0]);
       })
       .catch((error) => {
-        console.error("Error fetching article data:", error);
+        console.error("Error fetching Book data:", error);
       });
-  }, [articleId]);
+  }, [bookId]);
 
   return (
     <>
@@ -53,27 +53,27 @@ function Article() {
       <div className="flex flex-col md:flex-row max-w-6xl mx-auto py-20 px-6">
         {/* card */}
         <div className="flex-2 flex-col space-y-2 rounded-lg max-w-md bg-gray-100 border-2 border-blue-200">
-          <img src={articleData.image} alt={articleData.title} />
+          <img src={bookData.image} alt={bookData.title} />
           {/*  */}
           <div className="flex flex-col gap-1 p-4">
             <h2 className="text-xl capitalize font-bold text-blue-600">
-              {articleData.title}
+              {bookData.title}
             </h2>
             {/* */}
-            <p>Writer: {articleData.writter}</p>
-            <p>Time: {articleData.time}</p>
-            <p>Category: {articleData.category}</p>
+            <p>Writer: {bookData.writter}</p>
+            {/* <p>Time: {bookData.time}</p> */}
+            <p>Category: {bookData.category}</p>
           </div>
           <div className="flex items-center gap-4 p-6">
             <button
-              onClick={() => deletArticle(articleId)}
+              onClick={() => deletBook(bookId)}
               className="text-red-600 hover:bg-red-100 capitalize font-semibold p-2 rounded-lg border border-red-600 text-sm"
             >
-              Delete article
+              Delete Book
             </button>
-            <Link to={`/edit-article/${articleId}`}>
+            <Link to={`/edit-book/${bookId}`}>
               <button className="text-[#1d3557]  hover:bg-blue-100 capitalize font-semibold p-2 rounded-lg border border-blue-600 text-sm">
-                Edit article
+                Edit Book
               </button>
             </Link>
           </div>
@@ -81,12 +81,12 @@ function Article() {
 
         {/* information */}
         <div className="flex-10 flex-col gap-2 p-4 max-w-lg">
-          <p>{articleData.description}</p>
-          <p>{articleData.description}</p>
+          <p>{bookData.description}</p>
+          <p>{bookData.description}</p>
         </div>
       </div>
     </>
   );
 }
 
-export default Article;
+export default LocalBookDescription;

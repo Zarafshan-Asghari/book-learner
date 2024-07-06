@@ -2,10 +2,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home";
 import Books from "./pages/books/books";
-import Article from "./pages/article/article";
-import AddArticle from "./pages/addArticle/AddArticle";
+// import LocalBookDescription from "./components/localBookitem/localBookItem";
+import LocalBookDescription from "./pages/local-book-description/local-book-description";
+
+import Addbook from "./pages/addbook/addbook";
 import EditArticle from "./pages/editArticle/editArticle";
-import Articles from "./components/allArticles/articles";
+// import Articles from "./components/allLocalBooks/book";
+import LocalBookSearch from "./components/allLocalBooks/book";
 function App() {
   return (
     <>
@@ -13,14 +16,17 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/books" element={<Books />} />
-          <Route path="/article" element={<Article />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/add-article" element={<AddArticle />} />
+          <Route path="/search-books" element={<Books />} />
+          <Route path="/book/:bookId" element={<LocalBookDescription />} />
+          <Route path="/local-book-search" element={<LocalBookSearch />} />
+          <Route path="/add-book" element={<Addbook />} />
 
-          <Route path="/article/:articleId" element={<Article />} />
-          <Route path="/edit-article/:articleId" element={<EditArticle />} />
+          <Route path="/edit-books/:bookId" element={<EditArticle />} />
           <Route path="/books" element={<Books />} />
+          {/* <Route
+            path="/local-books/:bookId"
+            element={<LocalBookDescription />}
+          /> */}
         </Routes>
       </BrowserRouter>
     </>

@@ -4,15 +4,15 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { Navigate } from "react-router-dom";
 
-function AddArticle() {
+function AddBook() {
   const [formValue, setFormValue] = useState({});
-  const addArticleFun = () => {
+  const addbookFun = () => {
     axios
-      .post(`http://localhost/react/api/articles/`, formValue)
+      .post(`http://localhost:3000/books/`, formValue)
       .then((response) => {
         if (response.status >= 200 && response.status < 300) {
           Swal.fire({
-            title: "Article Successfully Added !",
+            title: "book Successfully Added !",
             timer: 2000,
             timerProgressBar: true,
             showConfirmButton: false,
@@ -58,13 +58,13 @@ function AddArticle() {
               htmlFor="title"
               className="text-[#e63946] capitalize font-thin "
             >
-              article title
+              book title
             </label>
             <input
               onChange={(e) => setValue(e, "title")}
               name="title"
               type="text"
-              placeholder="enter article title"
+              placeholder="enter book title"
               className="outline-none py-1 px-2 rounded-lg placeholder:capitalize placeholder:text-sm placeholder:font-thin border border-gray-200"
             />
           </span>
@@ -74,13 +74,13 @@ function AddArticle() {
               htmlFor="text"
               className="text-[#e63946] capitalize font-thin "
             >
-              article text
+              description
             </label>
             <input
               onChange={(e) => setValue(e, "text")}
               id="text"
               type="text"
-              placeholder="enter article text"
+              placeholder="enter book text"
               className="outline-none py-1 px-4 rounded-lg placeholder:capitalize placeholder:text-sm placeholder:font-thin border border-gray-200"
             />
           </span>
@@ -103,13 +103,13 @@ function AddArticle() {
           {/* subject */}
           <span className="flex flex-col space-y-1">
             <label htmlFor="" className="text-[#e63946] capitalize font-thin ">
-              article catagory
+              book catagory
             </label>
             <input
               onChange={(e) => setValue(e, "catagory")}
               id=""
               type="text"
-              placeholder="enter article catagory"
+              placeholder="enter book catagory"
               className="outline-none py-1 px-2 rounded-lg placeholder:capitalize placeholder:text-sm placeholder:font-thin border border-gray-200"
             />
           </span>
@@ -119,32 +119,20 @@ function AddArticle() {
               htmlFor="image"
               className="text-[#e63946] capitalize font-thin "
             >
-              article Image
+              book Image
             </label>
             <input
               onChange={(e) => setValue(e, "image")}
               id="image"
               type="url"
-              placeholder="enter article image"
+              placeholder="enter book image"
               className="outline-none py-1 px-2 rounded-lg placeholder:capitalize placeholder:text-sm placeholder:font-thin border border-gray-200"
             />
           </span>
-          {/* time */}
-          <span className="flex flex-col space-y-1">
-            <label htmlFor="" className="text-[#e63946] capitalize font-thin ">
-              article time
-            </label>
-            <input
-              onChange={(e) => setValue(e, "time")}
-              id=""
-              type="number"
-              placeholder="time to study"
-              className="outline-none py-1 px-2 rounded-lg placeholder:capitalize placeholder:text-sm placeholder:font-thin border border-gray-200"
-            />
-          </span>
+
           <div className="mt-6">
             <button
-              onClick={addArticleFun}
+              onClick={addbookFun}
               className="px-10 py-2 outline-none bg-[#1d3557] capitalize text-white rounded-lg shadow-lg hover:bg-opacity-75"
             >
               sava
@@ -155,4 +143,4 @@ function AddArticle() {
     </>
   );
 }
-export default AddArticle;
+export default AddBook;
