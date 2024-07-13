@@ -2,6 +2,7 @@ import Navbar from "../../components/navbar/navbar";
 import React, { useState } from "react";
 import axios from "axios";
 import BookCard from "../../components/onlineBooks/onlineBook";
+import LocalBookSearch from "../../components/allLocalBooks/book";
 
 function Books() {
   const [search, setSearch] = useState("");
@@ -52,6 +53,9 @@ function Books() {
           <BookCard key={book.id} book={book} />
         ))}
       </div>
+
+      {/* LocalBookSearch => component used here */}
+      <LocalBookSearch></LocalBookSearch>
     </>
   );
 }

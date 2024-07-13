@@ -51,15 +51,7 @@ export default function Navbar() {
               to="/add-book"
               className="text-[#e63946] border-[#f1faee] hover:border-[#e63946] rounded-lg font-semibold py-2 px-4 border-2 border-transparent transition-colors duration-300"
             >
-              add book
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/local-book-search"
-              className="text-[#e63946] border-[#f1faee] hover:border-[#e63946] rounded-lg font-semibold py-2 px-4 border-2 border-transparent transition-colors duration-300"
-            >
-              local search
+              add +
             </NavLink>
           </li>
         </ul>
